@@ -34,6 +34,8 @@ const slideForward = (event) => {
     previous = 3;
   }
 
+  document.querySelector('#current-num').textContent = '0' + (visible + 1) + '.';
+
 document.querySelectorAll('.image-section > img')[visible].classList.add('img-opened');
 
   function resetPrevious() {
@@ -50,8 +52,6 @@ document.querySelectorAll('.image-section > img')[visible].classList.add('img-op
 
   document.querySelectorAll('.heading-fragment')[visible].classList.add('open-frag');
   document.querySelectorAll('.image-section > img')[visible].classList.add('img-opened');
-
-
 
 }
 
@@ -88,7 +88,7 @@ const slideBack = (event) => {
     previous = 3;
   }
 
-  console.log(previous,visible,next);
+  document.querySelector('#current-num').textContent = '0' + (visible + 1) + '.';
 
 document.querySelectorAll('.image-section > img')[visible].classList.add('img-opened');
 
